@@ -1,5 +1,7 @@
 
 import streamlit as st
-st.title ('Grocery Shop')
-st.header ('Welcome to our grocery')
-st.text('We sell all verities grocery with good quality and good prices')
+st.title ('My MOM\s new healthy Dinner')
+st.header('U+1F469','Hot dog Breakfast Menu')
+st.text('Curry Omega 3 & Blueberry Oatmeal')
+st.text('Sandwich Kale, Spinach & Rocket Smoothie')
+st.text('Cooking Hard-Boiled Free-Range Egg')
