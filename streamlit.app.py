@@ -17,9 +17,9 @@ st.dataframe(fruit_to_show)
 
 st.header("Fruityvice Fruit Advice!")
 fruit_choice = st.text_input('What fruit would you like information about?','Kiwi')
-st.write('The user entered ', aaple)
+st.write('The user entered ', 'apple')
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ "kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ "apple")
 #st.text(fruityvice_response.json()) # just write data to the screen
 # write your own comment -what does the next line do? 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
