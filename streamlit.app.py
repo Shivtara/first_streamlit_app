@@ -14,3 +14,8 @@ fruits_selected = st.multiselect("Pick Some Fruits", list(my_fruit_list.index),[
 
 fruit_to_show = my_fruit_list.loc[fruits_selected]
 st.dataframe(fruit_to_show)
+
+
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
