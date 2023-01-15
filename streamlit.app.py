@@ -21,15 +21,25 @@ fruit_to_show = my_fruit_list.loc[fruits_selected]
 st.dataframe(fruit_to_show)
 
 st.header("Fruityvice Fruit Advice!")
-fruit_choice = st.text_input('What fruit would you like information about?','apple')
-st.write('The user entered ', 'apple')
+try
+    fruit_choice = st.text_input('What fruit would you like information about?)
+ if not fruit_choice
+    st.error('Please select a fruit to get information.')
+ else
+   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ fruit_choice)             
+   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+   st.dataframe(fruityvice_normalized)
+                                 
+ except URLError as e
+    st.error()                             
+#st.write('The user entered ', 'apple')
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ "apple")
+#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ "apple")
 #st.text(fruityvice_response.json()) # just write data to the screen
 # write your own comment -what does the next line do? 
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+#fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
-st.dataframe(fruityvice_normalized)
+#st.dataframe(fruityvice_normalized)
 
 st.stop();
 
