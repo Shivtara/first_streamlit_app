@@ -37,21 +37,7 @@ try:
                                  
 except URLError as e:
     st.error()                             
-#st.write('The user entered ', 'apple')
-
-#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ "apple")
-#st.text(fruityvice_response.json()) # just write data to the screen
-# write your own comment -what does the next line do? 
-#fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# write your own comment - what does this do?
-#st.dataframe(fruityvice_normalized)
-
 st.stop();
-
-#my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
-#my_cur = my_cnx.cursor()
-#my_cur.execute("insert into fruit_load_list values ('from st')")
-#my_data_rows = my_cur.fetchall()
 st.header("The Fruit Load List Contains:")
 #Snowflake related function
 def get_fruit_load_list():
