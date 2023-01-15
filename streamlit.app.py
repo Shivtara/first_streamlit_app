@@ -42,8 +42,8 @@ st.header("The Fruit Load List Contains:")
 #Snowflake related function
 def get_fruit_load_list():
     with my_cnx.cursor() as my_cur:
-    my_cur.execute("select * from fruit_load_list")
-    return my_cur.fetchall()
+       my_cur.execute("select * from fruit_load_list")
+       return my_cur.fetchall()
 
 #Add button to load the fruit
 if st.button('Get Fruit Load List:')
